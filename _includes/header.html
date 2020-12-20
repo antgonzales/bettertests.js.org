@@ -1,0 +1,9 @@
+<header class="site-header">
+  <nav class="site-nav">
+    {% for rec in site.recommendations %}
+      {% if rec.title %}
+        <a href="#{{ rec.id }}">{{ rec.title | escape }}</a>
+      {% endif %}
+    {% endfor %}
+  </nav>
+</header>
