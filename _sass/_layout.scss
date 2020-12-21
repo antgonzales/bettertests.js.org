@@ -1,0 +1,9 @@
+.layout {
+  display: inline-grid;
+  grid-template-columns: 30rem auto;
+  grid-template-rows: auto;
+}
+
+.page-content {
+  grid-column: 2 / 2;
+}

@@ -1,10 +1,10 @@
 <article id="{{ page.id }}" class="recommendation" itemscope itemtype="https://schema.org/HowToTip">
   <header class="recommendation-header">
     <h3 class="recommendation-title" itemprop="name headline">{{ page.title | escape }}</h3>
-    <a href="{{site.repository_url}}/{{page.path}}" target="_blank">Edit this recommendation</a>
   </header>
 
   <div class="recommendation-content" itemprop="text">
     {{ content }}
   </div>
+  <a href="{{site.repository_url}}/{{page.path}}" target="_blank">Edit this recommendation</a>
 </article>

@@ -1,0 +1,50 @@
+// Colors
+//
+//
+
+//Pallette
+$white: #fff;
+$blue: #3A5CC5;
+$black: #000;
+$graphite: #333;
+$gray-dark: #444;
+$ink: #222;
+$gray: #777;
+$gray-light: #DDD;
+
+
+// hhkb photo from profile
+$free-blue: #455AC8; // blue esc key
+$lavender: #E9E9F0; // bg color
+$link-water: #C5C9D9; // shift key
+$topaz: #7F7E81; // hhkb logo
+$fire-brick: #AA1F11; // ctrl key
+
+$bg-color: $lavender;
+$primary-text-color: $ink;
+$secondary-text-color: $topaz;
+$link-color: $free-blue;
+$card-bg-color: $white;
+
+$btn-color: $link-water;
+$primary-btn-color: $free-blue;
+$secondary-btn-color: $fire-brick;
+
+// Typography
+$mono-font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+$sans-serif-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$serif-font-family: Georgia, Times, serif;
+
+$base-font-size: 1.6rem;
+$base-line-height: 1.45;
+$line-height-computed: $base-font-size * $base-line-height;
+$line-height-computed-half: $line-height-computed / 2;
+
+$h1-font-size: 2.25 * $base-font-size;
+$h2-font-size: 1.9 * $base-font-size;
+$h3-font-size: 1.5 * $base-font-size;
+$h4-font-size: 1.25 * $base-font-size;
+$h5-font-size: $base-font-size;
+$h6-font-size: .875 * $base-font-size;
+$headings-line-height: 1.2;
+$headings-font-weight: 700;

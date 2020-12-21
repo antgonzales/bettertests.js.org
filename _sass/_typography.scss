@@ -1,0 +1,74 @@
+// Typography
+
+body {
+  background: $bg-color;
+  font-size: $base-font-size;
+  font-family: $sans-serif-font-family;
+  line-height: $base-line-height;
+  color: $primary-text-color;
+}
+
+::selection,
+::-moz-selection {
+  background: $ink;
+  color: $white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: $headings-line-height;
+  font-weight: $headings-font-weight;
+}
+
+h1 { font-size: $h1-font-size; }
+h2 { font-size: $h2-font-size; }
+h3 { font-size: $h3-font-size; }
+h4 { font-size: $h4-font-size; }
+h5 { font-size: $h5-font-size; }
+h6 { font-size: $h6-font-size; }
+.subheader { color: $gray-light; }
+
+p.lead {
+  font-size: $base-font-size * 1.5238095;
+  color: $gray-light;
+}
+
+em, .italic { font-style: italic; }
+strong, .bold { font-weight: bold;}
+small, .small { font-size: 80%; }
+
+blockquote, blockquote p {
+  font-size: $base-font-size * 1.3125;
+  line-height: $base-line-height;
+  color: $gray-light;
+  font-family: $mono-font-family;
+  font-style: italic;
+}
+
+blockquote {
+  padding: $line-height-computed-half $line-height-computed 0 $line-height-computed;
+  border-left: 1px solid $gray-light;
+}
+
+blockquote cite {
+  display: block;
+  font-size: 80%;
+  color: $gray-light;
+}
+
+blockquote cite:before { content: "\2014 \0020"; }
+blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: $gray-light; }
+
+code, kbd, pre, samp { font-size: 1.6rem; }
+
+:not(pre) > code {
+  background-color: #002b36;
+  color: $white;
+  padding: .5rem;
+  border-radius: .3rem;
+  line-height: 1.45;
+  vertical-align: middle;
+}
+
+.italic {
+  font-style: italic;
+}

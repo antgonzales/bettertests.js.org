@@ -1,6 +1,6 @@
 ---
 layout: recommendation
-title:  "Describe you functions, classes, and components"
+title:  "Describe the object"
 ---
 
 Be clear about what function, class constructor, or component you are

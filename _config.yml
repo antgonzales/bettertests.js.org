@@ -22,8 +22,7 @@ title: Better Tests
 author:
   name: "@antgonzales"
 description: >- # this means to ignore newlines until "baseurl:"
-  Better Tests is a collection of Javascript testing best practices inspired by
-  BetterSpecs.org to improve your coding skills and level up your test suite. 
+  Javascript testing best practices
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.bettertests.dev" # the base hostname & protocol for your site, e.g. http://example.com
 repository_url: "https://github.com/antgonzales/better-tests"

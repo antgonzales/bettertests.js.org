@@ -1,6 +1,6 @@
 ---
 layout: recommendation
-title:  "Describe behavior, not implementation"
+title:  "Describe expected behavior"
 ---
 A test assertion should describe the desired behavior, not the implementation
 details. Additionally, tests should describe behavior as clearly as possible.
