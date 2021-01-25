@@ -1,9 +1,3 @@
-.site-header {
-  position: sticky;
-  padding: 3rem;
-  top: 0;
-  height: 100vh;
-}
 
 .site-marquee {
   padding-bottom: 5rem;
@@ -33,7 +27,7 @@
 }
 
 .site-nav a {
-  display: block;
-  padding-top: .6rem;
-  padding-bottom: .6rem;
+  display: inline-block;
+  margin-top: .6rem;
+  margin-bottom: .6rem;
 }

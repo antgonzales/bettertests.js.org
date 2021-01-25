@@ -1,9 +1,18 @@
 .layout {
-  display: inline-grid;
-  grid-template-columns: 30rem auto;
-  grid-template-rows: auto;
+  max-width: 108rem;
+  margin: auto;
+  display: flex;
 }
 
 .page-content {
-  grid-column: 2 / 2;
+  max-width: 68rem;
+  margin: 3rem auto auto;
+}
+
+.site-header {
+  position: sticky;
+  width: 35rem;
+  padding: 3rem;
+  top: 0;
+  height: 100vh;
 }

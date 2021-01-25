@@ -3,16 +3,17 @@
 
   {%- include head.html -%}
 
-  <body class="layout">
+  <body>
+    <div class="layout">
 
-    {%- include header.html -%}
+      {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-      {{ content }}
-    </main>
+      <main class="page-content" aria-label="Content">
+        {{ content }}
+        {%- include footer.html -%}
+      </main>
 
-    {%- include footer.html -%}
-
+    </div>
   </body>
 
 </html>

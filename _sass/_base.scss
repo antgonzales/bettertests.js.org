@@ -7,11 +7,29 @@ html {
   box-sizing: inherit;
 }
 
-a {
-  text-decoration: none;
+body {
+  border-top: .4rem solid $ochre;
 }
 
-a:hover {
-  text-decoration: underline;
+a {
+  text-decoration: none;
+  color: $link-color;
+  text-decoration: none;
+  background: #fcf8f3 none repeat scroll 0% 0%;
+  border-bottom: .1em dotted;
 }
-  
+
+a:hover,
+a:focus,
+a:active {
+  border-bottom-style: solid;
+  border-bottom-color: inherit;
+}
+
+div.highlight {
+  border-radius: .6rem;
+}
+
+pre.highlight {
+  padding: 1.25rem 1.5rem;
+}

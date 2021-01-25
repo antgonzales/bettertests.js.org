@@ -11,7 +11,8 @@ with open parantheses and no parameters. For framework specific examples, check
 their documentation and usage.
 
 Bad
-```
+
+```javascript
 describe('a function to transform data', () => {});
 
 describe('a class to track analytics', () => {});
@@ -24,7 +25,8 @@ describe('a web component to render dates', () => {});
 ```
 
 Good
-```
+
+```javascript
 describe('transformData()', () => {});
 
 describe('Analytics()', () => {});
