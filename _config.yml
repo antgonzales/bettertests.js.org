@@ -24,8 +24,8 @@ author:
 description: >- # this means to ignore newlines until "baseurl:"
   Javascript testing best practices
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.bettertests.dev" # the base hostname & protocol for your site, e.g. http://example.com
-repository_url: "https://github.com/antgonzales/better-tests"
+url: "https://bettertests.js.org/" # the base hostname & protocol for your site, e.g. http://example.com
+repository_url: "https://github.com/bettertests/bettertests.github.io"
 
 highligher: rouge
 
@@ -36,6 +36,9 @@ plugins:
 
 collections:
   - recommendations
+
+# Google Analytics
+google_analytics: UA-188939485-1
 
 # Exclude from processing.
 # The following items will not be processed, by default.
