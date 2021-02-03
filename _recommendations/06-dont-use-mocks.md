@@ -2,14 +2,23 @@
 layout: recommendation
 title:  "Don't use mocks"
 ---
-Mocks are code smell. Mocks are tempting but often test too much of
+Mocks are a code smell. Mocks are tempting but often test too much
 implementation and not enough behavior. Instead, find a way to stub the
 environment the way JSDOM stubs a browser DOM. You may want to use different
-tools in the future and testing their implementation details will only get in
-the way of a big refactor.
+tools in the future, and testing their implementation details will only stop you
+from refactoring.
 
-Bad
-```
+Recomended libraries:
+
+* [nock](https://github.com/nock/nock)
+* [msw](https://mswjs.io/)
+* [miragejs](https://miragejs.com/)
+* [cypress.io](https://docs.cypress.io/guides/guides/network-requests.htm)
+
+### Bad
+{: .spec-wrong}
+
+```javascript
 jest.mock('axios);
 
 it('signs up a new user', () => {
@@ -23,8 +32,10 @@ it('signs up a new user', () => {
 });
 ```
 
-Good
-```
+### Good
+{: .spec-right}
+
+```javascript
 it('signs up a new user', () => {
   nock('http://localhost.com/user')
     .post('/new')

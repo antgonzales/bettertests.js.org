@@ -1,0 +1,35 @@
+.recommendation {
+  margin-bottom: 6rem;
+}
+
+.recommendation-content {
+  margin-bottom: 1.5rem;
+}
+
+.recommendation-content h3 {
+  color: white;
+  padding: 1.25rem 1.5rem;
+  border-radius: .6rem .6rem 0 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+.recommendation-content div.highlight {
+  padding: 1.5rem;
+  border-radius: 0 0 .6rem .6rem;
+  overflow: auto;
+}
+
+.recommendation-content .highlight {
+  margin: 0;
+}
+
+.spec-wrong {
+  background-color: red;
+}
+
+.spec-right {
+  background-color: green;
+}
+

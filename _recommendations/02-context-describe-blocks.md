@@ -2,11 +2,12 @@
 layout: recommendation
 title:  "Nest describe blocks for context"
 ---
-Nesting should be avoided but when testing user flows, describe
-blocks can provide additional context.
+Avoid nesting when testing user flows. Describe blocks are better at providing additional context.
 
-Bad
-```
+### Bad
+{: .spec-wrong}
+
+```javascript
 describe('<ProductPage />', () => {
   it('displays the user as a guest when not logged in', () => {});
 
@@ -16,8 +17,10 @@ describe('<ProductPage />', () => {
 });
 ```
 
-Good
-```
+### Good
+{: .spec-right}
+
+```javascript
 describe('<ProductPage/>', () => {
   describe('when user is a guest', () => {
     it('displays the user as a guest', () => {});

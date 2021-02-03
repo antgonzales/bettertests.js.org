@@ -2,13 +2,15 @@
 layout: recommendation
 title:  "Create only the data you need"
 ---
-It's tempting to setup all the data required to avoid errors. Howevever, this
+It's tempting to set up all the data required to avoid errors. However, this
 makes testing in isolation difficult and doesn't allow you to address situations
 with missing data. Instead, add data for specific contexts or individual tests
 only when necessary.
 
-Bad
-```
+### Bad
+{: .spec-wrong}
+
+```javascript
 describe('<AccountPage/>', () => {
   beforeEach(signInUser);
   beforeEach(generateOrderHistory);
@@ -17,9 +19,10 @@ describe('<AccountPage/>', () => {
 });
 ```
 
-Good
+### Good
+{: .spec-right}
 
-```
+```javascript
 describe('<AccountPage/>', () => {
   it('redirects users who are not signed in', () => {});
 

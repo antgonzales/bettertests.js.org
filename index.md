@@ -7,7 +7,7 @@ layout: default
   <p>Better Tests is a collection of Javascript testing best practices inspired by
   <a href="https://www.betterspecs.org/" target="_blank">BetterSpecs.org</a> to
   improve your coding skills and level up your test suite.</p>
-  <p>Note: These recommendations use <a href="https://jestjs.io/" target="_blank">Jest</a> syntax as the
+  <p><em>Note:</em> These recommendations use <a href="https://jestjs.io/" target="_blank">Jest</a> syntax as the
   basis for testing Javascript. Make considerations when using a different framework.</p>
 </section>
 
