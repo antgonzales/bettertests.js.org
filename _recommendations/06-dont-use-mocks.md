@@ -19,7 +19,7 @@ Recomended libraries:
 {: .spec-wrong}
 
 ```javascript
-jest.mock('axios);
+jest.mock('axios');
 
 it('signs up a new user', () => {
   const {getByTestId} = render(<UserForm />);
