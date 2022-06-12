@@ -22,7 +22,7 @@ it('calls onSubmit when the user clicks the button', () => {});
 ```javascript
 it('redirects guest users', () => {});
 
-it('retreives column ids from columns', () => {});
+it('retrieves column ids from columns', () => {});
 
 it('submits the form', () => {});
 ```
