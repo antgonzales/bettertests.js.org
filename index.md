@@ -1,5 +1,6 @@
 ---
 layout: default
+image: /assets/img/better-tests-logo.png
 ---
 
 <section class="intro">
