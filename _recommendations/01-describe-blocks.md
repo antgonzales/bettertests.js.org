@@ -35,7 +35,7 @@ describe('Analytics()', () => {});
 
 describe('<Dates/>', () => {}); 
 
-describe('Vue.component('dates')', () => {});
+describe("Vue.component('dates')", () => {});
 
 describe('<dates>', () => {});
 ```
