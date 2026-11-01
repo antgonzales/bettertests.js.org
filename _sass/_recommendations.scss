@@ -1,35 +1,62 @@
 .recommendation {
-  margin-bottom: 6rem;
+  margin-bottom: 7.2rem;
 }
 
-.recommendation-content {
-  margin-bottom: 1.5rem;
+.recommendation-header {
+  margin-bottom: 1.6rem;
 }
 
-.recommendation-content h3 {
-  color: white;
-  padding: 1.25rem 1.5rem;
-  border-radius: .6rem .6rem 0 0;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-}
-
-.recommendation-content div.highlight {
-  padding: 1.5rem;
-  border-radius: 0 0 .6rem .6rem;
-  overflow: auto;
-}
-
-.recommendation-content .highlight {
+.recommendation-title {
   margin: 0;
 }
 
+.recommendation-content {
+  margin-bottom: 1.6rem;
+}
+
+// "Bad" / "Good" headers sit on the code block itself: same dark surface,
+// label in the syntax theme's own red or green, and a rule in that color.
+.recommendation-content h3 {
+  margin: 2.4rem 0 0;
+  padding: 0.9rem 1.6rem;
+  background: $code-header-bg;
+  border-top: 3px solid;
+  border-radius: 0.6rem 0.6rem 0 0;
+  font-family: $mono-font-family;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
 .spec-wrong {
-  background-color: red;
+  color: $bad;
+  border-color: $bad;
 }
 
 .spec-right {
-  background-color: green;
+  color: $good;
+  border-color: $good;
 }
 
+.recommendation-content div.highlight {
+  margin: 0;
+  padding: 1.6rem;
+  border-radius: 0 0 0.6rem 0.6rem;
+  overflow-x: auto;
+}
+
+.recommendation-content .highlight pre {
+  margin: 0;
+}
+
+.recommendation > a {
+  font-size: $small-font-size;
+  color: $secondary-text-color;
+}
+
+@media (max-width: 56em) {
+  .recommendation-content div.highlight {
+    padding: 1.2rem;
+  }
+}

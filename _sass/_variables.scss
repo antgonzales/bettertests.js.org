@@ -37,20 +37,28 @@ $primary-btn-color: $free-blue;
 $secondary-btn-color: $fire-brick;
 
 // Typography
-$mono-font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-$sans-serif-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$serif-font-family: Georgia, Times, serif;
+//
+// Prose in the system sans; code in the system mono. No webfonts: this page
+// is read next to GitHub and MDN, and the code blocks are the content.
+$mono-font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+$sans-serif-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 
-$base-font-size: 1.6rem;
-$base-line-height: 1.6;
-$line-height-computed: $base-font-size * $base-line-height;
-$line-height-computed-half: $line-height-computed / 2;
+$base-font-size: 1.7rem;
+$base-line-height: 1.55;
+$small-font-size: 1.5rem;
+$code-font-size: 1.35rem;
+$code-line-height: 1.6;
 
-$h1-font-size: 2.25 * $base-font-size;
-$h2-font-size: 1.9 * $base-font-size;
-$h3-font-size: 1.5 * $base-font-size;
-$h4-font-size: 1.25 * $base-font-size;
-$h5-font-size: $base-font-size;
-$h6-font-size: .875 * $base-font-size;
-$headings-line-height: 1.2;
-$headings-font-weight: 500;
+$h1-font-size: 3.2rem;
+$h2-font-size: 2.6rem;
+$headings-line-height: 1.15;
+$headings-font-weight: 600;
+$headings-letter-spacing: -0.015em;
+
+$inline-code-bg: #f0f0f2;
+$code-bg: #282c34;          // matches _syntax-one-dark
+$code-header-bg: #21252b;
+$rule-color: #e4e4e8;
+$underline-color: #b9b9c2;
+$bad: #e06c75;              // one-dark red, read on the dark header
+$good: #98c379;             // one-dark green

@@ -6,69 +6,70 @@ body {
   font-family: $sans-serif-font-family;
   line-height: $base-line-height;
   color: $primary-text-color;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-::selection,
-::-moz-selection {
-  background: $ink;
-  color: $white;
+::selection {
+  background: $ochre;
+  color: $eerie-black;
 }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: $headings-line-height;
   font-weight: $headings-font-weight;
+  letter-spacing: $headings-letter-spacing;
+  margin: 0 0 1.6rem;
+  text-wrap: balance;
 }
 
 h1 { font-size: $h1-font-size; }
 h2 { font-size: $h2-font-size; }
-h3 { font-size: $h3-font-size; }
-h4 { font-size: $h4-font-size; }
-h5 { font-size: $h5-font-size; }
-h6 { font-size: $h6-font-size; }
-.subheader { color: $gray-light; }
 
-p.lead {
-  font-size: $base-font-size * 1.5238095;
-  color: $gray-light;
+p {
+  margin: 0 0 1.6rem;
 }
 
-em, .italic { font-style: italic; }
-strong, .bold { font-weight: bold;}
-small, .small { font-size: 80%; }
+em { font-style: italic; }
+strong { font-weight: 600; }
 
-blockquote, blockquote p {
-  font-size: $base-font-size * 1.3125;
-  line-height: $base-line-height;
-  color: $gray-light;
+// Code
+code, kbd, pre, samp {
   font-family: $mono-font-family;
-  font-style: italic;
+  font-size: $code-font-size;
+  line-height: $code-line-height;
 }
-
-blockquote {
-  padding: $line-height-computed-half $line-height-computed 0 $line-height-computed;
-  border-left: 1px solid $gray-light;
-}
-
-blockquote cite {
-  display: block;
-  font-size: 80%;
-  color: $gray-light;
-}
-
-blockquote cite:before { content: "\2014 \0020"; }
-blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: $gray-light; }
-
-code, kbd, pre, samp { font-size: 1.6rem; }
 
 :not(pre) > code {
-  background-color: #002b36;
-  color: $white;
-  padding: .5rem;
-  border-radius: .3rem;
-  line-height: 1.45;
-  vertical-align: middle;
+  font-size: 0.9em;
+  background: $inline-code-bg;
+  color: inherit;
+  padding: 0.1em 0.35em;
+  border-radius: 0.3rem;
+  white-space: nowrap;
 }
 
-.italic {
-  font-style: italic;
+pre {
+  margin: 0;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+// Links
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: $underline-color;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration-color: currentColor;
+}
+
+a:focus-visible {
+  outline: 2px solid $ochre;
+  outline-offset: 2px;
 }

@@ -1,0 +1,22 @@
+{
+  "name": "bettertests-examples",
+  "private": true,
+  "type": "module",
+  "description": "Every code block on bettertests.js.org is lifted from a test in this package.",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "sync": "node scripts/sync-markdown.mjs --write",
+    "sync:check": "node scripts/sync-markdown.mjs --check"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
+    "jsdom": "^30.1.3",
+    "msw": "^3.0.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "vitest": "^5.0.5"
+  }
+}

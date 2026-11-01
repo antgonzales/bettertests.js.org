@@ -1,18 +1,30 @@
 .layout {
-  max-width: 108rem;
-  margin: auto;
+  max-width: 112rem;
+  margin: 0 auto;
   display: flex;
+  gap: 4rem;
+  padding: 0 2.4rem;
 }
 
 .page-content {
-  max-width: 68rem;
-  margin: 3rem auto auto;
+  flex: 1 1 auto;
+  min-width: 0;          // lets code blocks scroll instead of widening the column
+  max-width: 72rem;
+  padding: 4rem 0 6rem;
 }
 
-.site-header {
-  position: sticky;
-  width: 35rem;
-  padding: 3rem;
-  top: 0;
-  height: 100vh;
+.intro {
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 56em) {
+  .layout {
+    display: block;
+    padding: 0 1.6rem;
+  }
+
+  .page-content {
+    max-width: none;
+    padding-top: 2.4rem;
+  }
 }

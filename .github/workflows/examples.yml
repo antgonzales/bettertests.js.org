@@ -1,0 +1,26 @@
+name: examples
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  test:
+    name: Run every code block on the site
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: examples
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: examples/package-lock.json
+      - run: npm ci
+      - name: Tests (bad examples pass too; they are marked with a Problem comment)
+        run: npm test
+      - name: Markdown code blocks match the tests
+        run: npm run sync:check

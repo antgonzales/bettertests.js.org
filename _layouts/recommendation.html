@@ -1,4 +1,4 @@
-<article id="{{ page.id }}" class="recommendation" itemscope itemtype="https://schema.org/HowToTip">
+<article id="{{ page.title | slugify }}" class="recommendation" itemscope itemtype="https://schema.org/HowToTip">
   <header class="recommendation-header">
     <h2 class="recommendation-title" itemprop="name headline">{{ page.title | escape }}</h2>
   </header>
