@@ -8,7 +8,7 @@
       {% for rec in site.recommendations %}
         {% if rec.title %}
           <li>
-            <a href="#{{ rec.id }}">{{ rec.title | escape }}</a>
+            <a href="/#{{ rec.title | slugify }}">{{ rec.title | escape }}</a>
           </li>
         {% endif %}
       {% endfor %}
