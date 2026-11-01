@@ -22,11 +22,13 @@ describe('<ProductPage />', () => {
 
   it('links to sign in when the user is not signed in', () => {
     render(<ProductPage product={buildProduct()} />);
-    expect(screen.getByRole('link', { name: 'Sign in' })).toHaveAttribute('href', '/sign-in');
+    const signIn = screen.getByRole('link', { name: 'Sign in' });
+    expect(signIn).toHaveAttribute('href', '/sign-in');
   });
 
   it('greets the user by name when the user is signed in', () => {
-    render(<ProductPage product={buildProduct()} user={buildUser({ name: 'Ada' })} />);
+    const user = buildUser({ name: 'Ada' });
+    render(<ProductPage product={buildProduct()} user={user} />);
     expect(screen.getByRole('status')).toHaveTextContent('Signed in as Ada');
   });
 });
@@ -47,13 +49,15 @@ describe('<ProductPage />', () => {
 
     it('links to sign in', () => {
       render(<ProductPage product={buildProduct()} />);
-      expect(screen.getByRole('link', { name: 'Sign in' })).toHaveAttribute('href', '/sign-in');
+      const signIn = screen.getByRole('link', { name: 'Sign in' });
+      expect(signIn).toHaveAttribute('href', '/sign-in');
     });
   });
 
   describe('when the user is signed in', () => {
     it('greets the user by name', () => {
-      render(<ProductPage product={buildProduct()} user={buildUser({ name: 'Ada' })} />);
+      const user = buildUser({ name: 'Ada' });
+      render(<ProductPage product={buildProduct()} user={user} />);
       expect(screen.getByRole('status')).toHaveTextContent('Signed in as Ada');
     });
   });

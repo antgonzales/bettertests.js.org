@@ -18,7 +18,8 @@ option. PhantomJS and Nightmare are unmaintained; drop them.
 // moving the price fails the test while the page still looks right.
 describe('<ProductPage />', () => {
   it('shows the price', () => {
-    const { container } = render(<ProductPage product={buildProduct({ priceCents: 19900 })} />);
+    const product = buildProduct({ priceCents: 19900 });
+    const { container } = render(<ProductPage product={product} />);
     const price = container.querySelector('.product__price');
     expect(price).not.toBeNull();
     expect(price.textContent).toBe('$199.00');

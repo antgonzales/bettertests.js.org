@@ -1,6 +1,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-padding-top: 2rem;
 }
 
 *, *:before, *:after {
@@ -8,22 +9,10 @@ html {
 }
 
 body {
-  border-top: .4rem solid $ochre;
+  margin: 0;
+  border-top: 0.4rem solid $ochre;
 }
 
-a {
-  text-decoration: none;
-  color: $link-color;
-  text-decoration: none;
-  background: #fcf8f3 none repeat scroll 0% 0%;
-  border-bottom: .1em dotted;
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
 }
-
-a:hover,
-a:focus,
-a:active {
-  border-bottom-style: solid;
-  border-bottom-color: inherit;
-}
-
-

@@ -8,7 +8,8 @@ import { buildProduct } from '../src/factories.js';
 // fails the test, and nobody reads the diff before pressing "update".
 describe('<ProductPage />', () => {
   it('shows the guest banner', () => {
-    render(<ProductPage product={buildProduct({ name: 'Wireless Headphones', priceCents: 19900 })} />);
+    const product = buildProduct({ name: 'Wireless Headphones', priceCents: 19900 });
+    render(<ProductPage product={product} />);
     expect(screen.getByRole('status')).toMatchInlineSnapshot(`
       <p
         class="guest-banner"
@@ -30,8 +31,10 @@ describe('<ProductPage />', () => {
 // example:good
 describe('<ProductPage />', () => {
   it('shows the product name and price', () => {
-    render(<ProductPage product={buildProduct({ name: 'Wireless Headphones', priceCents: 19900 })} />);
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Wireless Headphones');
+    const product = buildProduct({ name: 'Wireless Headphones', priceCents: 19900 });
+    render(<ProductPage product={product} />);
+    const heading = screen.getByRole('heading', { level: 1 });
+    expect(heading).toHaveTextContent('Wireless Headphones');
     expect(screen.getByText('$199.00')).toBeInTheDocument();
   });
 });

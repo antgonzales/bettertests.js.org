@@ -20,8 +20,9 @@ describe('<SignUpForm />', () => {
 describe('<SignUpForm />', () => {
   it('requires an email and a password', async () => {
     render(<SignUpForm />);
-    await userEvent.type(screen.getByRole('textbox', { name: 'Email' }), 'ada@example.com');
-    expect(screen.getByRole('textbox', { name: 'Email' })).toHaveValue('ada@example.com');
+    const email = screen.getByRole('textbox', { name: 'Email' });
+    await userEvent.type(email, 'ada@example.com');
+    expect(email).toHaveValue('ada@example.com');
     // Password inputs have no ARIA role, so fall back to the label.
     expect(screen.getByLabelText('Password')).toBeRequired();
   });

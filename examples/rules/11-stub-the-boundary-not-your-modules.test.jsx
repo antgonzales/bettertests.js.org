@@ -13,7 +13,8 @@ afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
 async function fillAndSubmit() {
-  await userEvent.type(screen.getByRole('textbox', { name: 'Email' }), 'ada@example.com');
+  const email = screen.getByRole('textbox', { name: 'Email' });
+  await userEvent.type(email, 'ada@example.com');
   await userEvent.type(screen.getByLabelText('Password'), 'correct horse battery');
   await userEvent.click(screen.getByRole('button', { name: 'Create account' }));
 }
@@ -38,7 +39,9 @@ describe('<SignUpForm />', () => {
 describe('<SignUpForm />', () => {
   it('signs up a new user', async () => {
     server.use(
-      http.post(`${api.API_URL}/accounts`, () => HttpResponse.json({ id: 1 }, { status: 201 })),
+      http.post(`${api.API_URL}/accounts`, () =>
+        HttpResponse.json({ id: 1 }, { status: 201 }),
+      ),
     );
     render(<SignUpForm />);
     await fillAndSubmit();
@@ -53,7 +56,8 @@ describe('<SignUpForm />', () => {
     );
     render(<SignUpForm />);
     await fillAndSubmit();
-    expect(await screen.findByRole('alert')).toHaveTextContent('Email already registered');
+    const alert = await screen.findByRole('alert');
+    expect(alert).toHaveTextContent('Email already registered');
   });
 });
 // example:end

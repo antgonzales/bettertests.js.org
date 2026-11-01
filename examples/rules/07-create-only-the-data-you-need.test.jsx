@@ -33,7 +33,8 @@ describe('<ProductPage />', () => {
 describe('<ProductPage />', () => {
   it('shows the product name', () => {
     render(<ProductPage product={buildProduct({ name: 'Wireless Headphones' })} />);
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Wireless Headphones');
+    const heading = screen.getByRole('heading', { level: 1 });
+    expect(heading).toHaveTextContent('Wireless Headphones');
   });
 
   it('says when there are no reviews', () => {
@@ -42,7 +43,10 @@ describe('<ProductPage />', () => {
   });
 
   it('lists the reviews', () => {
-    const reviews = [buildReview({ body: 'Great sound.' }), buildReview({ body: 'Too heavy.' })];
+    const reviews = [
+      buildReview({ body: 'Great sound.' }),
+      buildReview({ body: 'Too heavy.' }),
+    ];
     render(<ProductPage product={buildProduct()} reviews={reviews} />);
     expect(screen.getAllByRole('listitem').map((li) => li.textContent)).toEqual([
       'Great sound.',

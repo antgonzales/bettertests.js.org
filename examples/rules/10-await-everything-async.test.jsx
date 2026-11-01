@@ -18,7 +18,8 @@ afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
 async function fillAndSubmit() {
-  await userEvent.type(screen.getByRole('textbox', { name: 'Email' }), 'ada@example.com');
+  const email = screen.getByRole('textbox', { name: 'Email' });
+  await userEvent.type(email, 'ada@example.com');
   await userEvent.type(screen.getByLabelText('Password'), 'correct horse battery');
   await userEvent.click(screen.getByRole('button', { name: 'Create account' }));
 }

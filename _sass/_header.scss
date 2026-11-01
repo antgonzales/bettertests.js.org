@@ -1,33 +1,75 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  flex: 0 0 28rem;
+  align-self: flex-start;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 4rem 0 4rem;
+}
 
 .site-marquee {
-  padding-bottom: 5rem;
+  margin-bottom: 3.2rem;
 }
 
 .site-title {
-  letter-spacing: .2rem;
+  display: inline-block;
+  font-family: $mono-font-family;
+  font-size: $small-font-size;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: bold;
+  margin-bottom: 0.6rem;
 }
 
 .site-description {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: $small-font-size;
+  color: $secondary-text-color;
+  max-width: 24ch;
 }
 
+.site-nav ol,
 .site-nav ul {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .site-nav li {
- padding: 1rem 0;
+  padding: 0.5rem 0;
+  font-size: $small-font-size;
+  line-height: 1.4;
 }
 
 .site-nav a {
-  display: inline-block;
-  margin-top: .6rem;
-  margin-bottom: .6rem;
+  text-decoration: none;
+  color: $primary-text-color;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.18em;
+}
+
+@media (max-width: 56em) {
+  .site-header {
+    position: static;
+    flex: none;
+    max-height: none;
+    overflow: visible;
+    padding: 2.4rem 0 0;
+    border-bottom: 1px solid $rule-color;
+  }
+
+  .site-marquee {
+    margin-bottom: 2rem;
+  }
+
+  .site-nav li {
+    padding: 0.35rem 0;
+  }
 }
