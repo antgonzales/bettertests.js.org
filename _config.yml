@@ -21,12 +21,11 @@
 title: Better Tests
 author:
   name: Anthony Gonzales
-  twitter: dietmtnview
 description: >- # this means to ignore newlines until "baseurl:"
   Javascript testing best practices for developer joy.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://bettertests.js.org # the base hostname & protocol for your site, e.g. http://example.com
-repository_url: https://github.com/bettertests/bettertests.github.io
+repository_url: https://github.com/antgonzales/bettertests.js.org
 
 highligher: rouge
 
@@ -41,8 +40,10 @@ collections:
 # Google Analytics
 google_analytics: G-Y79S89HB6T
 
-twitter:
-  username: dietmtnview
+github_username: antgonzales
+
+exclude:
+  - examples/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
