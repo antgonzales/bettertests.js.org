@@ -23,6 +23,14 @@
   margin-bottom: 0.6rem;
 }
 
+.site-title:focus-visible {
+  outline: none;
+  text-decoration: underline;
+  text-decoration-color: $ochre;
+  text-decoration-thickness: 0.2em;
+  text-underline-offset: 0.3em;
+}
+
 .site-description {
   margin: 0;
   font-size: $small-font-size;

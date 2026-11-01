@@ -1,7 +1,6 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  scroll-padding-top: 2rem;
 }
 
 *, *:before, *:after {
@@ -11,8 +10,4 @@ html {
 body {
   margin: 0;
   border-top: 0.4rem solid $ochre;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html { scroll-behavior: smooth; }
 }
