@@ -24,7 +24,8 @@ describe('<ProductPage />', () => {
 
 describe('transformData()', () => {
   it('transforms data correctly', () => {
-    expect(transformData([{ id: 1, display_name: 'Mug', price_cents: 1250 }])).toEqual([
+    const rows = [{ id: 1, display_name: 'Mug', price_cents: 1250 }];
+    expect(transformData(rows)).toEqual([
       { id: 1, name: 'Mug', price: '$12.50' },
     ]);
   });
@@ -46,7 +47,8 @@ describe('<ProductPage />', () => {
 
 describe('transformData()', () => {
   it('formats prices in dollars', () => {
-    expect(transformData([{ id: 1, display_name: 'Mug', price_cents: 1250 }])).toEqual([
+    const rows = [{ id: 1, display_name: 'Mug', price_cents: 1250 }];
+    expect(transformData(rows)).toEqual([
       { id: 1, name: 'Mug', price: '$12.50' },
     ]);
   });

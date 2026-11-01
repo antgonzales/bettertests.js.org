@@ -1,5 +1,5 @@
 .layout {
-  max-width: 118rem;
+  max-width: 112rem;
   margin: 0 auto;
   display: flex;
   gap: 4rem;
@@ -9,16 +9,12 @@
 .page-content {
   flex: 1 1 auto;
   min-width: 0;          // lets code blocks scroll instead of widening the column
-  max-width: 78rem;
+  max-width: 72rem;
   padding: 4rem 0 6rem;
 }
 
 .intro {
   margin-bottom: 5rem;
-}
-
-.intro p {
-  max-width: 60ch;
 }
 
 @media (max-width: 56em) {

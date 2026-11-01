@@ -8,7 +8,10 @@ import { buildProduct } from '../src/factories.js';
 // fails the test, and nobody reads the diff before pressing "update".
 describe('<ProductPage />', () => {
   it('shows the guest banner', () => {
-    const product = buildProduct({ name: 'Wireless Headphones', priceCents: 19900 });
+    const product = buildProduct({
+      name: 'Wireless Headphones',
+      priceCents: 19900,
+    });
     render(<ProductPage product={product} />);
     expect(screen.getByRole('status')).toMatchInlineSnapshot(`
       <p
@@ -31,7 +34,10 @@ describe('<ProductPage />', () => {
 // example:good
 describe('<ProductPage />', () => {
   it('shows the product name and price', () => {
-    const product = buildProduct({ name: 'Wireless Headphones', priceCents: 19900 });
+    const product = buildProduct({
+      name: 'Wireless Headphones',
+      priceCents: 19900,
+    });
     render(<ProductPage product={product} />);
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toHaveTextContent('Wireless Headphones');

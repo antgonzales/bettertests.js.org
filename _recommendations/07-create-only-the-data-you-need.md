@@ -28,7 +28,8 @@ describe('<ProductPage />', () => {
 
   it('shows the product name', () => {
     render(<ProductPage product={product} user={user} reviews={reviews} />);
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(product.name);
+    const heading = screen.getByRole('heading', { level: 1 });
+    expect(heading).toHaveTextContent(product.name);
   });
 
   it('lists the reviews', () => {

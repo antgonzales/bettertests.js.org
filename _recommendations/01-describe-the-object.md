@@ -16,7 +16,8 @@ from the code as soon as someone renames a function.
 // Problem: prose titles drift from the code and are hard to grep for.
 describe('a function to transform data', () => {
   it('drops rows without an id', () => {
-    expect(transformData([{ display_name: 'No id', price_cents: 100 }])).toEqual([]);
+    const rows = [{ display_name: 'No id', price_cents: 100 }];
+    expect(transformData(rows)).toEqual([]);
   });
 });
 
@@ -36,7 +37,8 @@ describe('the sign up form component', () => {
 ```jsx
 describe('transformData()', () => {
   it('drops rows without an id', () => {
-    expect(transformData([{ display_name: 'No id', price_cents: 100 }])).toEqual([]);
+    const rows = [{ display_name: 'No id', price_cents: 100 }];
+    expect(transformData(rows)).toEqual([]);
   });
 });
 
